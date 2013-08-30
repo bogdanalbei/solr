@@ -761,9 +761,9 @@ PHP_METHOD(SolrClient, addDocument)
 	}
 
 	doc_ptr = solr_xml_create_xml_doc((xmlChar *) "add", &root_node);
-	allowDupsValue = (allowDups)? "true" : "false";
+	//allowDupsValue = (allowDups)? "true" : "false";
 
-	xmlNewProp(root_node, (xmlChar *) "allowDups", (xmlChar *) allowDupsValue);
+	//xmlNewProp(root_node, (xmlChar *) "allowDups", (xmlChar *) allowDupsValue);
 
 	if (commitWithin > 0L)
 	{
@@ -932,9 +932,9 @@ PHP_METHOD(SolrClient, addDocuments)
 	}
 
 	doc_ptr = solr_xml_create_xml_doc((xmlChar *) "add", &root_node);
-	allowDupsValue = (allowDups) ? (xmlChar *) "true" : (xmlChar *) "false";
+	//allowDupsValue = (allowDups) ? (xmlChar *) "true" : (xmlChar *) "false";
 
-	xmlNewProp(root_node, (xmlChar *) "allowDups", allowDupsValue);
+	//xmlNewProp(root_node, (xmlChar *) "allowDups", allowDupsValue);
 
 	if (commitWithin > 0L)
 	{
